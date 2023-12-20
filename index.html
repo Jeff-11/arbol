@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poema en Jerarquía</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+            color: #f9f9f9;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        .fonfo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(fondo.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.4;
+            z-index: -2;
+        }
+
+        .star {
+            position: absolute;
+            top: 22%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+            width: 100px;
+        }
+
+        .tau {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+            width: 100px; /* Ajusta el tamaño según sea necesario */
+        }
+
+        .tree-container {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tree-text {
+            margin: 0 10px;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+
+        /* Media queries para hacer el diseño más responsive */
+
+        @media only screen and (max-width: 600px) {
+            .star, .tree-container, .tau {
+                top: 5%;
+            }
+
+            .tree-container {
+                top: 10%;
+            }
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 768px) {
+            .star, .tree-container, .tau {
+                top: 8%;
+            }
+
+            .tree-container {
+                top: 15%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fonfo"></div>
+    <img src="es.png" alt="Estrella" class="star">
+    <img src="tau.png" alt="Otra Imagen" class="tau">
+    
+    <div class="tree-container">
+        <h1 class="tree-text">Y<br></h1>
+        <h1 class="tree-text">Yo<br></h1>
+        <h1 class="tree-text">Yol<br></h1>
+        <h1 class="tree-text">Yole<br></h1>
+        <h1 class="tree-text">Yolen<br></h1>
+        <h1 class="tree-text">Yoleny</h1>
+    </div>
+</body>
+</html>
